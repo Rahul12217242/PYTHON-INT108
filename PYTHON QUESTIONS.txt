@@ -1,0 +1,98 @@
+MULTIPLICATION TABLE USING NESTED LOOPS:
+print("Multiplication Table")
+n=int(input("Enter the number upto which you want to print the table: "))
+m=int(input("Enter the multiples: "))
+print(" |", end='')
+for j in range (1,n+1):
+    print(" ", j, end='')
+print()
+print("-----------------------------------------------")
+for i in range (1,n+1):
+    print(i, "|", end='')
+    for j in range(1,m+1):
+        print(format(i*j,"4d"),end='')
+    print()
+
+
+
+PATTERN 1:
+n=int(input("Rows: "))
+m=int(input("Columns: "))                                  **********************************************
+                                                           **********************************************
+for i in range(1,n+1):
+    for j in range(1,m+1):
+        print("*",end='')
+    print()
+
+
+
+
+REVERSE PATTERN:
+*****
+****
+***
+**
+*
+n=int(input("Rows: "))
+for i in range(n,0,-1):
+    for j in range(1,i+1):
+        print("*",end='')
+    print()
+
+
+
+REVERSE NUMBER:
+1234
+123
+12
+1
+
+n=int(input("Rows: "))
+for i in range(n,0,-1):
+    for j in range(1,i+1):
+        print(j,end='')
+    print()
+
+
+
+ALPHABET PATTERN:
+A
+AB
+ABC
+ABCD
+ABCDE
+val=65
+n=int(input("Enter number of rows: "))
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(chr(val),end='')
+        val=val+1
+    val=65
+    print()
+
+
+DISPLAY ALL PRIME NUMBERS FROM N TO M:
+flag=0
+n=int(input("Enter n(>=2): "))
+m=int(input("Enter m(>=2): "))
+print("List of prime numbers are: ")
+for i in range(n,m+1):
+    for j in range(2,(i//2)+1):
+        if i%j==0:
+            flag=1
+    if flag==0:
+        print(i)
+    flag=0
+
+
+
+
+TRANSPOSE OF A MATRIX:
+matrix=[[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+matrix1=[[0,0,0],[0,0,0],[0,0,0],[0,0,0]]
+print("Original matrix: ",matrix)
+for i in range(3):
+    for j in range(4):
+        matrix1[j][i]=matrix[i][j]
+print("Trapose: ",matrix1)
+
